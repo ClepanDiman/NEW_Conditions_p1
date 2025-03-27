@@ -6,38 +6,37 @@ public class Main {
         if (age >= 18) {
             System.out.println("Если возраст человека равен " + age + " , то он достиг совершеннолетия");
         }
-        if (age < 18) {
+        else  {
             // Блок выполнится, так как возраст действительно меньше 18
             System.out.println("Нужно немного подождать");
 
         }
         // task2
-        byte degreesTemp = 3;
+        byte degreesTemp = 10;
         byte mountDegrees = 5;
         boolean aboveDegrees = degreesTemp > mountDegrees;
-        boolean belowDegrees = degreesTemp <= mountDegrees; // тут я добавил <= тк 5 градусов у нас ушло из интервала
+
 
         if (aboveDegrees) {
             System.out.println("На улице "+ degreesTemp + " градусов, можно идти без шапки");
 
         }
-        if (belowDegrees) {
+        else  {
             System.out.println("На улице " + degreesTemp + " градусов,  нужно надеть шапку");
         }
 
         //task3
-        int speedTemp = 60;
+        int speedTemp = 61;
         int limSpeed = 60;
         boolean aboveSpeed = speedTemp > limSpeed;
-        boolean belowSpeed = speedTemp <= limSpeed;
+
         if (aboveSpeed){
             System.out.println("Если скорость " + speedTemp +" , то придется заплатить штраф");
         }
-        if (belowSpeed){
+        else {
             System.out.println("Если скорость " + speedTemp +" , можно ездить спокойно");
         }
         //task4
-
         //берем age из другого задания
         byte schoolАgeUp = 17;
         byte schoolАgeDwn = 7;
@@ -63,14 +62,8 @@ public class Main {
         if (workAge){
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить работу");
         }
-        //task5
-        //Как правило, на аттракционах действуют ограничения для детей по возрасту:
-        //
-        // Если ребенку меньше 5 лет, то он не может кататься на аттракционе.
-        // Если ребенку больше 5, но меньше 14 лет, то он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя.
-        // Если ребенок старше 14 лет, то он может кататься без сопровождения взрослого.
-        //Напишите программу, которая выводит в консоль сообщение в формате: «Если возраст ребенка равен …, то ему … (в зависимости от возраста дописать нужное: нельзя кататься на аттракционе, можно кататься на аттракционе в сопровождении / без сопровождения взрослого)».
 
+        //task5
         byte inAge = 75;
         boolean inMaintainer = true;
         boolean ageOfСonstr = inAge < 5;
@@ -88,42 +81,33 @@ public class Main {
         }
 
         //task6
-
         byte allNumOfSeats = 102;
         byte seatСapacity = 60;
-        byte standPlaces = 42;
-        byte seatInc = 30; // количество занятых мест сидячих
-        byte standInc = 42;// количество занятых мест стоячих
+        byte incPeople = 101;
 
-        boolean availabOfSeats = seatСapacity - seatInc != 0;
-        boolean availabOfStand = standPlaces - standInc != 0;
-        boolean availabOf = seatInc + standInc < allNumOfSeats;
+        if (incPeople >= 0 && incPeople <= seatСapacity) {
+            System.out.println("В вагоне имеются места сидячие");
+        }
 
-        if (availabOf || availabOfSeats || availabOfStand) {
-            System.out.println("В вагоне имеются места сидячие или стоячие");
-        } else {
+        if (incPeople < allNumOfSeats) {
+            System.out.println("В вагоне имеются места стоячие");
+        }else {
             System.out.println("В вагоне нет свободных мест");
         }
 
+
+
         //task7
-
-
 
         int one = 0;
         int two = 1;
         int three = 2;
 
-        boolean a1 = false, a2 = false;
-
-        boolean a3 = a1 && a2;
-
         boolean bigOne = (one - two > 0) && (one - three > 0);
         boolean bigTwo = two - one > 0 && two - three> 0;
         boolean bigThree = three - one > 0 && three - two > 0;
 
-        if((one - two > 0) && (one - three > 0)){
-            System.out.println(true);
-        }
+
 
         if (bigOne){
             System.out.println("Больше всех " + one);
